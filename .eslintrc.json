@@ -1,0 +1,68 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    "brace-style": "off",
+    "new-cap": [
+      "error",
+      {
+        "newIsCap": true,
+        "properties": false
+      }
+    ],
+    "no-var": "error",
+    "no-console": "off",
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false
+        }
+      }
+    ],
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "ignoreTemplateLiterals": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$"
+      }
+    ]
+  },
+  "globals": {
+    "a11ySuite": true,
+    "Fabric": true,
+    "firebase": true,
+    "fixture": true,
+    "flush": true,
+    "MockInteractions": true,
+    "Polymer": true,
+    "WCT": true
+  }
+}
